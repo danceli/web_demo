@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/index.css">
+
+	<title>Tab</title>
+</head>
+<body>
+	<div class="tab D_tab">
+		<div class="nav">
+			<div class="nav-item current">选项一</div>
+			<div class="nav-item">选项二</div>
+			<div class="nav-item">选项三</div>
+			<div class="nav-item">选项四</div>
+		</div>
+		<div class="page">
+			<div class="page-item current">页面一</div>
+			<div class="page-item">页面二</div>
+			<div class="page-item">页面三</div>
+			<div class="page-item">页面四</div>
+		</div>
+	</div>
+	<script src="utils/index.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		let tab = new Tab({
+			el: '.tab',
+			classObject: {
+				navItem: {
+					origin: 'nav-item',
+					current: 'nav-item current'
+				},
+				pageItem: {
+					origin: 'page-item',
+					current: 'page-item current'
+				}
+			}
+		});
+		tab.init();
+	</script>
+</body>
+</html>
